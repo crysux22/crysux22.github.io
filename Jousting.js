@@ -901,9 +901,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","68");
+		_this.setReserved("build","70");
 	} else {
-		_this.h["build"] = "68";
+		_this.h["build"] = "70";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -5506,6 +5506,10 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		}
 		if(flixel_FlxG.keys.checkKeyArrayState([68,39],1)) {
 			this.player.acceleration.set_x(this.player.maxVelocity.x);
+		}
+		var _this = flixel_FlxG.keys.pressed;
+		if(_this.keyManager.checkStatus(82,_this.status)) {
+			this.player.setPosition(480,180);
 		}
 		flixel_FlxState.prototype.update.call(this,elapsed);
 		flixel_FlxG.overlap(this.player,this.level,null,flixel_FlxObject.separate);
@@ -66207,7 +66211,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 779847;
+	this.version = 287137;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];

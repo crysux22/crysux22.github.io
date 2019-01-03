@@ -901,9 +901,9 @@ ApplicationMain.create = function(config) {
 	ManifestResources.init(config);
 	var _this = app.meta;
 	if(__map_reserved["build"] != null) {
-		_this.setReserved("build","70");
+		_this.setReserved("build","72");
 	} else {
-		_this.h["build"] = "70";
+		_this.h["build"] = "72";
 	}
 	var _this1 = app.meta;
 	if(__map_reserved["company"] != null) {
@@ -4380,7 +4380,7 @@ ManifestResources.init = function(config) {
 	var data;
 	var manifest;
 	var library;
-	data = "{\"name\":null,\"assets\":\"aoy4:pathy23:assets%2Fdata%2FMap.csvy4:sizei1403y4:typey4:TEXTy2:idR1y7:preloadtgoR0y26:assets%2Fimages%2FTile.pngR2i188R3y5:IMAGER5R7R6tgoR0y31:assets%2Fimages%2Ftitlecard.pngR2i6415R3R8R5R9R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR11y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R10R5y28:flixel%2Fsounds%2Fflixel.mp3R12aR14y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R13R12aR11R13hgoR2i33629R3R16R5R15R12aR14R15hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R17R18y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R23R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R24R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	data = "{\"name\":null,\"assets\":\"aoy4:pathy23:assets%2Fdata%2FMap.csvy4:sizei5445y4:typey4:TEXTy2:idR1y7:preloadtgoR0y26:assets%2Fimages%2FTile.pngR2i151R3y5:IMAGER5R7R6tgoR0y31:assets%2Fimages%2Ftitlecard.pngR2i6415R3R8R5R9R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR11y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R10R5y28:flixel%2Fsounds%2Fflixel.mp3R12aR14y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R13R12aR11R13hgoR2i33629R3R16R5R15R12aR14R15hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R17R18y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R8R5R23R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R8R5R24R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	manifest = lime_utils_AssetManifest.parse(data,rootPath);
 	library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -5485,13 +5485,13 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 	,level: null
 	,create: function() {
 		this.player = new flixel_FlxSprite(480,180);
-		this.player.makeGraphic(32,32,-16776961);
+		this.player.makeGraphic(16,16,-16776961);
 		this.player.acceleration.set_y(800);
 		this.player.maxVelocity.set(400,800);
 		this.player.drag.set_x(this.player.maxVelocity.x / 2);
 		this.add(this.player);
 		this.level = new flixel_tile_FlxTilemap();
-		this.level.loadMapFromCSV("assets/data/Map.csv","assets/images/Tile.png",32,32);
+		this.level.loadMapFromCSV("assets/data/Map.csv","assets/images/Tile.png",16,16);
 		this.level.screenCenter();
 		this.add(this.level);
 		flixel_FlxState.prototype.create.call(this);
@@ -66211,7 +66211,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 287137;
+	this.version = 496435;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
